@@ -15,9 +15,15 @@ class BudgetList():
         else:
             self.overages.append(item)
             self.sum_overages += item
-        
+
     def __len__(self):
         return len(self.expenses) + len(self.overages)
+
+    def __iter__(self):
+        iter = iter(self.expenses)
+
+    def __next__(self):
+        pass
 
 
 def main():
@@ -30,4 +36,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
